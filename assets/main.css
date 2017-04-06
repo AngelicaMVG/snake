@@ -22,3 +22,8 @@ section{
   border: solid;
   background-color: white;
 }
+button{
+  font-size: 30px;
+  font-family: monospace;
+  align: center;
+}

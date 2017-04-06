@@ -4,7 +4,7 @@ document.addEventListener("keydown", mover);
 
 var avanzarX = 0;
 var avanzarY = 0;
-var movimiento = 40;
+var movimiento = 20;
 
 function mover(event){
   var tecla = event.keyCode;
@@ -27,7 +27,7 @@ function mover(event){
       break;
     case 39:
       avanzarX = avanzarX + movimiento;
-      if(avanzarX > 500){
+      if(avanzarX > 480){
         finDelJuego();
       } else{
       cuadrado.style.marginLeft = avanzarX + 'px';
@@ -35,7 +35,7 @@ function mover(event){
      break;
     case 40:
       avanzarY = avanzarY + movimiento;
-      if( avanzarY > 500){
+      if( avanzarY > 480){
         finDelJuego();
       } else {
       cuadrado.style.marginTop = avanzarY + 'px';
@@ -52,6 +52,7 @@ function finDelJuego(){
 function reiniciar(){
   var avanzarX = 0;
   var avanzarY = 0;
+  cuadrado.style.marginTop = avanzarY;
+  cuadrado.style.marginLeft = avanzarX;
   document.addEventListener("keydown", mover);
-
 }
